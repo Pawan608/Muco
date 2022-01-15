@@ -10,7 +10,7 @@ This website will help in rapid improvement of localities, and overall developme
 Web development
 
 ## 
-Html,Css, Pug, Node, Express, Mongodb
+Html,Css, Javascript, Pug, Node, Express, Mongodb
 
 ## Website Link 
 https://muco-trio.herokuapp.com/
