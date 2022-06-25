@@ -80,18 +80,22 @@ exports.signupcreate = catchAsync(async (req, res, next) => {
   });
 
   //// Creates a verification Token which is later sent through mail, and also a copy of it is stored in user model for verification
-  const verifyToken = user.verifytoken();
-  await user.save({ validateBeforeSave: false });
-  user.password = undefined;
-  user.verifyToken = undefined;
-  user.verified = undefined;
-  const url = `${req.protocol}://${req.get(
-    "host"
-  )}/users/signup/${verifyToken}`;
+  // const verifyToken = user.verifytoken();
+  // // await user.save({ validateBeforeSave: false });
+  // user.password = undefined;
+  // user.verifyToken = undefined;
+  // user.verified = undefined;
+  // const url = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/users/signup/${verifyToken}`;
 
   /////message contains a link that is sent to User's mail, cliking on the link will verify the mailID
   const subject = "Verification mail sent to your mailID, kindly verify it";
-  sendmail(res, user, url, subject, true);
+  // sendmail(res, user, url, subject, true);
+  res.status(200).json({
+    status: "success",
+    message: "Sign UP successfull",
+  });
 });
 
 ////To verify the MailID

@@ -23,15 +23,6 @@ app.use(function (req, res, next) {
   );
   next();
 });
-// app.use(function (req, res, next) {
-//   res.setHeader(
-//     "content-Security-Policy",
-//     "default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;style-src  'self' 'unsafe-inline' *"
-//   );
-//   next();
-// });
-// publistatic path
-
 app.use(express.static("public"));
 
 //app.engine("html", require("hbs").renderFile);

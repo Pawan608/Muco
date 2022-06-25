@@ -68,8 +68,8 @@ const userSchema = new mongoose.Schema(
     },
     verified: {
       type: Boolean,
-      default: false,
-      select: false,
+      default: true,
+      // select: false,
     },
     profile: String,
     verifyToken: String,
